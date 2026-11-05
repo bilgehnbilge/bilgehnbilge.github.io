@@ -212,7 +212,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   margin-top: clamp(28px, 4vw, 48px);
 }
 .hero-links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 28px; font-size: 0.9375rem; }
-.hero-links a { text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+.hero-links a { display: inline-flex; align-items: center; gap: 7px; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+.brand { width: 0.95em; height: 0.95em; flex: none; }
 .hero-links a:hover { border-color: var(--amber); }
 
 /* Büyüteç: fotoğraf griyken imlecin altındaki daire rengi ve detayı açar */
@@ -302,15 +303,27 @@ a.card:hover { border-color: color-mix(in srgb, var(--ink) 45%, transparent); }
 .c-contact .label { color: color-mix(in srgb, var(--inverse-ink) 70%, transparent); }
 .contact-links { display: flex; flex-direction: column; gap: 2px; }
 .contact-links a {
+  display: inline-flex; align-items: center; gap: 0.45em;
   font-family: var(--serif); font-size: clamp(1.35rem, 2vw, 1.75rem); line-height: 1.2;
   text-decoration: none; color: var(--inverse-ink);
 }
+.contact-links .brand { width: 0.72em; height: 0.72em; }
 .contact-links a:hover { text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 1.5px; }
 
 .c-design-imgs { display: flex; gap: 6px; margin-bottom: 8px; }
 .c-design-imgs img { width: calc((100% - 12px) / 3); aspect-ratio: 4 / 5; object-fit: cover; border-radius: 3px; background: var(--line); }
 
-.name-list { display: flex; flex-direction: column; gap: 2px; font-family: var(--serif); font-size: 1.15rem; line-height: 1.3; }
+.name-list { display: flex; flex-direction: column; gap: 7px; font-family: var(--serif); font-size: 1.15rem; line-height: 1.3; }
+.name-list li { display: flex; align-items: center; gap: 10px; }
+.name-list .app-icon { width: 24px; height: 24px; font-size: 0.8rem; }
+
+/* Uygulama simgeleri: Android'deki gibi yuvarlatılmış kare */
+.app-icon { width: 44px; height: 44px; flex: none; border-radius: 24%; }
+.app-icon.is-mono {
+  display: grid; place-items: center;
+  background: var(--paper); border: 1px solid var(--line);
+  font-family: var(--serif); font-size: 1.35rem; line-height: 1; color: var(--muted);
+}
 
 /* ------------------------------------------------------------
    Bölümler
@@ -401,6 +414,7 @@ a.card:hover { border-color: color-mix(in srgb, var(--ink) 45%, transparent); }
   padding: 22px; border: 1px solid var(--line); border-radius: var(--radius);
   display: flex; flex-direction: column; gap: 10px; min-height: 200px;
 }
+.project-head { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
 .project .platform { font-size: 0.8125rem; color: var(--sea); }
 .project h3 { font-family: var(--serif); font-weight: 450; font-size: 1.55rem; line-height: 1.1; letter-spacing: -0.015em; }
 .project p { color: var(--muted); }
