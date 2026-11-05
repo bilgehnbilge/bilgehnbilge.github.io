@@ -21,8 +21,6 @@
 const PF = 'https://cdn.myportfolio.com/e2476710-eefd-4451-8d2b-7e85420dd079/';
 
 window.SITE = {
-  email: 'bilgehan.bilg@gmail.com',
-
   links: [
     { label: 'Instagram', url: 'https://www.instagram.com/bilgehnbilge' },
     { label: 'X', url: 'https://x.com/bilgehnbilge' },
@@ -231,9 +229,7 @@ window.SITE = {
       'projects.intro': 'İhtiyaç duyduğum araçları kendim geliştiriyorum. Çoğu Android için, Material You ile.',
       'projects.github': 'GitHub’da kodlar',
       'contact.title': 'İletişim',
-      'contact.lead': 'Bir iş birliği, bir soru ya da sadece merhaba demek için yazabilirsiniz.',
-      'contact.copy': 'Adresi kopyala',
-      'contact.copied': 'Kopyalandı',
+      'contact.lead': 'Bir iş birliği, bir soru ya da sadece merhaba demek için bana bu hesaplardan ulaşabilirsiniz.',
       'footer.rights': 'Fotoğrafların ve tasarımların tüm hakları saklıdır.',
       'lb.close': 'Kapat',
       'lb.prev': 'Önceki fotoğraf',
@@ -300,9 +296,7 @@ window.SITE = {
       'projects.intro': 'I build the tools I need. Most of them are for Android, with Material You.',
       'projects.github': 'Code on GitHub',
       'contact.title': 'Contact',
-      'contact.lead': 'Write to me about a collaboration, a question, or just to say hello.',
-      'contact.copy': 'Copy address',
-      'contact.copied': 'Copied',
+      'contact.lead': 'For a collaboration, a question, or just to say hello, you can reach me on any of these.',
       'footer.rights': 'All photographs and designs are copyrighted.',
       'lb.close': 'Close',
       'lb.prev': 'Previous photo',
