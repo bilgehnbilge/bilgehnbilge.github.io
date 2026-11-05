@@ -118,10 +118,12 @@ window.SITE = {
     { id: 'eec10c711cd3', date: '2021-01-02', cat: 'tech', title: 'Android Kullanıcıları Twitch’te Better TV Kullanabilecek', dek: 'Resmi Twitch uygulaması üzerine yapılan bir mod, masaüstü sürümünün özelliklerini Android’e taşıyor.' }
   ],
 
-  /* Projeler. Henüz paylaşmak istemediğin bir şey varsa satırını silmen yeterli. */
+  /* Projeler. Henüz paylaşmak istemediğin bir şey varsa satırını silmen yeterli.
+     icon: uygulama simgesi (assets/img/app-*.svg). Simgesi olmayanlarda mono: tek harf gösterilir. */
   projects: [
     {
       name: 'İstanbul Ulaşım',
+      icon: 'assets/img/app-istanbul-ulasim.svg',
       platform: { tr: 'Android uygulaması', en: 'Android app' },
       text: {
         tr: 'İETT öncelikli bir İstanbul toplu taşıma uygulaması. Material 3 tasarımlı, Monet renkleriyle telefonunun temasına uyuyor.',
@@ -130,6 +132,7 @@ window.SITE = {
     },
     {
       name: 'Türkiye Hava Durumu',
+      icon: 'assets/img/app-turkiye-hava-durumu.svg',
       platform: { tr: 'Android uygulaması', en: 'Android app' },
       text: {
         tr: 'Meteoroloji Genel Müdürlüğü verileriyle çalışan, Material 3 Expressive tasarımlı bir hava durumu uygulaması.',
@@ -138,6 +141,7 @@ window.SITE = {
     },
     {
       name: 'Live Score Widget',
+      icon: 'assets/img/app-live-score-widget.svg',
       platform: { tr: 'Android widget', en: 'Android widget' },
       text: {
         tr: 'Canlı futbol skorlarını ana ekrana taşıyan bir widget. Favori takımların maçları için Smartspacer desteği yolda.',
@@ -146,6 +150,7 @@ window.SITE = {
     },
     {
       name: 'LR Template to Cube',
+      icon: 'assets/img/app-lr-template-to-cube.svg',
       platform: { tr: 'Android uygulaması', en: 'Android app' },
       text: {
         tr: 'Lightroom presetlerini (.lrtemplate, .xmp) telefonda kullanılabilecek .cube LUT dosyalarına dönüştürüyor.',
@@ -154,6 +159,7 @@ window.SITE = {
     },
     {
       name: 'X Kaynak Etiketi',
+      mono: 'K',
       platform: { tr: 'Tarayıcı eklentisi', en: 'Browser extension' },
       text: {
         tr: 'Bir X gönderisinin hangi istemciden (iPhone, Android, web) gönderildiğini gönderinin yanında gösteriyor.',
@@ -162,6 +168,7 @@ window.SITE = {
     },
     {
       name: 'Morphe Monet',
+      mono: 'M',
       platform: { tr: 'Android yama paketi', en: 'Android patch bundle' },
       text: {
         tr: 'Uygulamalara Monet (dinamik renk) teması ekleyen bir Morphe yama paketi. Her uygulama için ayrı yama; ilki Instafel.',
