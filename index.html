@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilgehan Bilge</title>
+  <meta name="description" content="Bilgehan Bilge: Doğruluk Payı’nda editör, fotoğrafçı ve tasarımcı. İstanbul.">
+  <meta name="author" content="Bilgehan Bilge">
+  <meta name="theme-color" content="#E9ECE7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1A22" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bilgehan Bilge">
+  <meta property="og:description" content="Editör, fotoğrafçı, tasarımcı. See The Unseen.">
+  <meta property="og:image" content="https://cdn.myportfolio.com/e2476710-eefd-4451-8d2b-7e85420dd079/b11e89f9-df66-48f7-adc9-30c5ff2fc47a_rw_1200.jpg?h=37af76220cb685085f2092044cdfce16">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@bilgehnbilge">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/schibsted-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    /* Temayı sayfa çizilmeden önce uygula, yanıp sönmesin. */
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top">Bilgehan Bilge</a>
+
+      <nav class="nav" id="nav" aria-label="Site">
+        <a href="#hakkimda" data-i18n="nav.about">Hakkımda</a>
+        <a href="#fotograf" data-i18n="nav.photos">Fotoğraf</a>
+        <a href="#tasarim" data-i18n="nav.design">Tasarım</a>
+        <a href="#yazilar" data-i18n="nav.writing">Yazılar</a>
+        <a href="#projeler" data-i18n="nav.projects">Projeler</a>
+        <a href="#iletisim" data-i18n="nav.contact">İletişim</a>
+      </nav>
+
+      <div class="controls">
+        <div class="lang" role="group" aria-label="Dil / Language">
+          <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button type="button" class="icon-btn" id="themeBtn" data-i18n-aria="nav.theme" aria-label="Açık ya da koyu temaya geç">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+        </button>
+        <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" data-i18n="nav.menu">Menü</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Açılış -->
+    <section class="hero wrap" aria-labelledby="name">
+      <div class="hero-text">
+        <h1 id="name" class="display">
+          <span class="line">Bilgehan</span>
+          <span class="line">Bilge</span>
+        </h1>
+        <p class="lead" data-i18n="hero.lead">Doğruluk Payı’nda editörüm. İstanbul’u fotoğraflıyor, sosyal medya için tasarım yapıyor ve kendi ihtiyaç duyduğum araçları geliştiriyorum.</p>
+        <ul class="hero-links" id="heroLinks"></ul>
+      </div>
+
+      <div class="hero-media">
+        <figure class="loupe" id="loupe">
+          <img class="loupe-base" id="loupeBase" alt="" width="1200" height="1800" fetchpriority="high">
+          <img class="loupe-reveal" id="loupeReveal" alt="" aria-hidden="true" width="1200" height="1800">
+          <span class="loupe-ring" aria-hidden="true"></span>
+        </figure>
+        <div class="loupe-meta">
+          <p class="loupe-caption"><span id="loupePlace"></span></p>
+          <button type="button" class="text-btn" id="nextFrame" data-i18n="hero.another">Başka bir kare</button>
+        </div>
+        <p class="loupe-hint" id="loupeHint" data-i18n="hero.hint">Görünmeyeni görmek için imleci fotoğrafta gezdir.</p>
+      </div>
+    </section>
+
+    <!-- Kısaca -->
+    <section class="glance wrap" aria-labelledby="glanceTitle">
+      <h2 id="glanceTitle" class="visually-hidden" data-i18n="glance.title">Kısaca</h2>
+      <div class="bento">
+        <a class="card c-photo" href="#fotograf">
+          <div class="c-photo-img"><img id="glancePhoto" alt="" loading="lazy" width="1200" height="1800"></div>
+          <div class="c-photo-foot">
+            <span class="label" data-i18n="card.photo.label">Fotoğraf</span>
+            <span class="more" data-i18n="card.photo.link">Galeriyi aç</span>
+          </div>
+        </a>
+
+        <article class="card c-now">
+          <p class="label" data-i18n="card.now.label">Şu an</p>
+          <h3 class="card-title" data-i18n="card.now.title">Editör, Doğruluk Payı</h3>
+          <p data-i18n="card.now.text">Türkiye’nin doğrulama platformlarından Doğruluk Payı’nda doğrulama içerikleri üzerinde çalışıyorum.</p>
+        </article>
+
+        <article class="card c-edu">
+          <p class="label" data-i18n="card.edu.label">Eğitim</p>
+          <h3 class="card-title" data-i18n="card.edu.title">Gazetecilik</h3>
+          <p data-i18n="card.edu.text">İstanbul Üniversitesi, İletişim Fakültesi</p>
+        </article>
+
+        <a class="card c-writing" id="glanceWriting" href="#yazilar">
+          <p class="label" data-i18n="card.writing.label">Medium’daki son yazım</p>
+          <h3 class="card-title big" id="glanceWritingTitle"></h3>
+          <p class="meta" id="glanceWritingDate"></p>
+        </a>
+
+        <a class="card c-design" href="#tasarim">
+          <div class="c-design-imgs" id="glanceDesign"></div>
+          <p class="label" data-i18n="card.design.label">Tasarım</p>
+          <p data-i18n="card.design.text">Gol var mı? ve Lig Radyo için sosyal medya tasarımları</p>
+        </a>
+
+        <a class="card c-projects" href="#projeler">
+          <p class="label" data-i18n="card.projects.label">Geliştirdiklerim</p>
+          <ul class="name-list" id="glanceProjects"></ul>
+        </a>
+
+        <div class="card c-contact">
+          <p class="label" data-i18n="card.contact.label">Yazışalım</p>
+          <a class="mail" id="glanceMail" href="#iletisim"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hakkımda -->
+    <section class="section wrap" id="hakkimda" aria-labelledby="aboutTitle">
+      <header class="section-head">
+        <h2 id="aboutTitle" class="section-title" data-i18n="nav.about">Hakkımda</h2>
+      </header>
+      <div class="about">
+        <div class="prose">
+          <p data-i18n="about.p1">İstanbul Üniversitesi İletişim Fakültesi Gazetecilik bölümünden mezun oldum. Bugün Doğruluk Payı’nda editör olarak çalışıyorum.</p>
+          <p data-i18n="about.p2"></p>
+        </div>
+        <dl class="facts">
+          <div><dt data-i18n="about.f.city">Şehir</dt><dd data-i18n="about.f.cityV">İstanbul</dd></div>
+          <div><dt data-i18n="about.f.lang">Diller</dt><dd data-i18n="about.f.langV">Türkçe, İngilizce</dd></div>
+          <div><dt data-i18n="about.f.focus">İlgi alanları</dt><dd data-i18n="about.f.focusV">Doğrulama, fotoğraf, görsel tasarım, Android</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Fotoğraf -->
+    <section class="section wrap" id="fotograf" aria-labelledby="photosTitle">
+      <header class="section-head">
+        <h2 id="photosTitle" class="section-title" data-i18n="photos.title">Fotoğraf</h2>
+        <p class="section-intro" data-i18n="photos.intro"></p>
+      </header>
+      <div class="filters" role="group" aria-labelledby="photosTitle" id="filters">
+        <button type="button" data-filter="all" aria-pressed="true" data-i18n="photos.all">Tümü</button>
+        <button type="button" data-filter="istanbul" aria-pressed="false" data-i18n="photos.istanbul">İstanbul</button>
+        <button type="button" data-filter="travel" aria-pressed="false" data-i18n="photos.travel">Yol</button>
+        <button type="button" data-filter="sport" aria-pressed="false" data-i18n="photos.sport">Spor</button>
+      </div>
+      <div class="gallery" id="gallery"></div>
+      <p class="after-note"><span data-i18n="photos.more">Daha fazlası Instagram, Flickr ve 500px’te.</span>
+        <a href="https://www.instagram.com/bilgehnbilge">Instagram</a>
+        <a href="https://www.flickr.com/photos/159152582@N05/">Flickr</a>
+        <a href="https://500px.com/p/bilgehnbilge">500px</a>
+      </p>
+    </section>
+
+    <!-- Tasarım -->
+    <section class="section wrap" id="tasarim" aria-labelledby="designTitle">
+      <header class="section-head">
+        <h2 id="designTitle" class="section-title" data-i18n="design.title">Tasarım</h2>
+        <p class="section-intro" data-i18n="design.intro"></p>
+      </header>
+      <div class="design-list" id="designList"></div>
+    </section>
+
+    <!-- Yazılar -->
+    <section class="section wrap" id="yazilar" aria-labelledby="writingTitle">
+      <header class="section-head">
+        <h2 id="writingTitle" class="section-title" data-i18n="writing.title">Yazılar</h2>
+        <p class="section-intro" data-i18n="writing.intro"></p>
+      </header>
+      <ol class="posts" id="posts"></ol>
+      <p class="after-note"><a href="https://medium.com/@bilgehnbilge" data-i18n="writing.profile">Medium profilim</a></p>
+    </section>
+
+    <!-- Projeler -->
+    <section class="section wrap" id="projeler" aria-labelledby="projectsTitle">
+      <header class="section-head">
+        <h2 id="projectsTitle" class="section-title" data-i18n="projects.title">Projeler</h2>
+        <p class="section-intro" data-i18n="projects.intro"></p>
+      </header>
+      <ul class="projects" id="projects"></ul>
+      <p class="after-note"><a href="https://github.com/bilgehnbilge" data-i18n="projects.github">GitHub’da kodlar</a></p>
+    </section>
+
+    <!-- İletişim -->
+    <section class="contact" id="iletisim" aria-labelledby="contactTitle">
+      <div class="wrap contact-inner">
+        <h2 id="contactTitle" class="section-title" data-i18n="contact.title">İletişim</h2>
+        <p class="contact-lead" data-i18n="contact.lead"></p>
+        <div class="mail-row">
+          <a class="mail-big" id="mailBig" href="#"></a>
+          <button type="button" class="text-btn" id="copyMail" data-i18n="contact.copy">Adresi kopyala</button>
+        </div>
+        <ul class="socials" id="socials"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Bilgehan Bilge. <span data-i18n="footer.rights">Fotoğrafların ve tasarımların tüm hakları saklıdır.</span></p>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox">
+    <figure class="lb-figure">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCaption"></figcaption>
+    </figure>
+    <button type="button" class="lb-btn lb-close" id="lbClose" data-i18n-aria="lb.close" aria-label="Kapat">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+    </button>
+    <button type="button" class="lb-btn lb-prev" id="lbPrev" data-i18n-aria="lb.prev" aria-label="Önceki fotoğraf">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M15 4l-8 8 8 8" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+    </button>
+    <button type="button" class="lb-btn lb-next" id="lbNext" data-i18n-aria="lb.next" aria-label="Sonraki fotoğraf">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M9 4l8 8-8 8" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+    </button>
+  </dialog>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
