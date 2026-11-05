@@ -168,15 +168,12 @@
     var soc = $('#socials'); soc.textContent = '';
     S.links.forEach(function (l) { soc.appendChild(el('li', null, [el('a', { href: l.url, text: l.label, rel: 'me' })])); });
 
-    ['#glanceMail', '#mailBig'].forEach(function (id) {
-      var a = $(id); a.textContent = S.email; a.href = 'mailto:' + S.email;
+    var gc = $('#glanceContact'); gc.textContent = '';
+    ['Instagram', 'X', 'LinkedIn'].forEach(function (name) {
+      var l = S.links.filter(function (x) { return x.label === name; })[0];
+      if (l) gc.appendChild(el('li', null, [el('a', { href: l.url, text: l.label, rel: 'me' })]));
     });
   }
-  $('#copyMail').addEventListener('click', function () {
-    var btn = this;
-    var ok = function () { btn.textContent = t('contact.copied'); setTimeout(function () { btn.textContent = t('contact.copy'); }, 1800); };
-    if (navigator.clipboard) navigator.clipboard.writeText(S.email).then(ok, function () {});
-  });
 
   /* ---------- Fotoğraf galerisi ---------- */
   var filter = 'all';
