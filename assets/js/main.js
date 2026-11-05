@@ -33,7 +33,15 @@
 
   function applyLang() {
     document.documentElement.lang = lang;
-    $$('[data-i18n]').forEach(function (n) { n.textContent = t(n.dataset.i18n); });
+    $$('[data-i18n]').forEach(function (n) {
+      var s = t(n.dataset.i18n);
+      if (s.indexOf('{dp}') === -1) { n.textContent = s; return; }
+      n.textContent = '';
+      s.split('{dp}').forEach(function (part, i) {
+        if (i) n.appendChild(el('a', { class: 'dp', href: S.dpUrl, text: 'Doğruluk Payı' }));
+        if (part) n.appendChild(document.createTextNode(part));
+      });
+    });
     $$('[data-i18n-aria]').forEach(function (n) { n.setAttribute('aria-label', t(n.dataset.i18nAria)); });
     $$('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
     var md = $('meta[name="description"]'); if (md) md.setAttribute('content', t('meta.description'));
