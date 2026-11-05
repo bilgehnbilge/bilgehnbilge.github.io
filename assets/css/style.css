@@ -42,6 +42,7 @@
   --amber: #D9922A;
   --amber-text: #9A5E0A;
   --sea: #2C6E6A;
+  --dp: #FF3439; /* Doğruluk Payı logosundaki kırmızı */
   --inverse-bg: #13232E;
   --inverse-ink: #E9ECE7;
   --shadow: 0 1px 0 rgba(19, 35, 46, 0.06);
@@ -188,7 +189,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   margin-left: -0.04em;
 }
 .display .line { display: block; }
-.display .line:nth-child(2) { padding-left: 1.6em; }
+.display .line:nth-child(2) { display: flex; align-items: center; }
+/* Portre, ikinci satırın solundaki boşluğa oturur; "Bilge" yerinden kaymaz */
+.portrait {
+  flex: none; width: 0.88em; height: 0.88em; margin: 0 0.66em 0 0.06em;
+  border-radius: 50%; object-fit: cover;
+  box-shadow: 0 0 0 1px var(--line);
+  transform: translateY(-0.08em);
+  filter: grayscale(1) contrast(1.04);
+  transition: filter 0.4s;
+}
+.portrait:hover { filter: none; }
+.dp { color: var(--dp); text-decoration: none; }
+.dp:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 0.18em; }
 
 .lead {
   font-family: var(--serif);
